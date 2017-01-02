@@ -14,7 +14,6 @@ if $TERM =~ '256color'
   set t_Co=256
 end
 
-colorscheme delek
 filetype off
 syntax on
 
@@ -56,6 +55,7 @@ let g:NERDSpaceDelims = 1
 Plugin 'scrooloose/nerdtree'
 nnoremap <C-g> :NERDTreeToggle<cr>
 nnoremap <C-f> :NERDTreeFind<cr>
+let NERDTreeShowHidden=1
 
 " display vcs changes
 Plugin 'tomtom/quickfixsigns_vim'
