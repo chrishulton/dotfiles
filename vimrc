@@ -13,21 +13,23 @@ if $TERM =~ '256color'
   set t_Co=256
 end
 
+syntax on
+
+colorscheme default
+
+" hi TabLineSel ctermfg=Black
+" hi StatusLine ctermfg=Black
+" hi Comment ctermfg=DarkGray
+" hi Constant ctermfg=Blue
+" hi Normal ctermfg=Black
+" hi NonText ctermfg=Red
+" hi Special ctermfg=DarkMagenta
+" hi Cursor ctermfg=Green
+
 " for doc editing
 set textwidth=100
 set colorcolumn=+1
-highlight ColorColumn ctermbg=gray
-
-hi TabLineSel ctermfg=Black
-hi StatusLine ctermfg=Black
-hi Comment ctermfg=DarkGray
-hi Constant ctermfg=Blue
-hi Normal ctermfg=Black
-hi NonText ctermfg=Red
-hi Special ctermfg=DarkMagenta
-hi Cursor ctermfg=Green
-
-syntax on
+highlight ColorColumn ctermbg=lightgray
 
 let localmapleader=","
 let mapleader=","
@@ -62,7 +64,7 @@ let g:ctrlp_map = '<Leader>.'
 let g:ctrlp_regexp = 1
 let g:ctrlp_switch_buffer = 0
 " let g:ctrlp_use_caching = 0
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --others --exclude-standard --cached']
+" let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --others --exclude-standard --cached']
 " map <Leader>, :CtrlPMixed<CR>
 map <Leader>, :CtrlP<CR>
 
@@ -103,6 +105,9 @@ Plugin 'junegunn/vim-easy-align'
 " xmap ga <Plug>(EasyAlign)
 xnoremap ga :EasyAlign * \|<CR>
 
+" ember
+Plugin 'mustache/vim-mustache-handlebars'
+
 " react
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -125,3 +130,6 @@ let ruby_space_errors = 1
 " go
 autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 autocmd FileType python setlocal shiftwidth=2 tabstop=2 expandtab
+
+" js
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
